@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="@dimen/item_enter_child_image_w"
+        android:layout_height="@dimen/item_enter_child_image_h"
+        android:scaleType="centerCrop"
+        tools:src="@mipmap/ic_launcher" />
+</layout>

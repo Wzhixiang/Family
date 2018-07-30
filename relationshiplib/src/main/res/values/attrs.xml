@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="NewRelationshipView2">
+        <attr name="addSrc" format="reference" />
+        <attr name="canAdd" format="boolean" />
+        <attr name="addGravity" format="enum">
+            <!--<enum name="" value=""/>-->
+
+        </attr>
+    </declare-styleable>
+</resources>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="navigationHeight">64dp</dimen>
+
+    <dimen name="item_enter_image_w">96dp</dimen>
+    <dimen name="item_enter_image_h">96dp</dimen>
+    <dimen name="item_enter_text_h">40dp</dimen>
+    <dimen name="item_enter_list_h">56dp</dimen>
+    <dimen name="item_enter_child_image_w">48dp</dimen>
+    <dimen name="item_enter_child_image_h">48dp</dimen>
+
+
+    <dimen name="margin_4dp">4dp</dimen>
+    <dimen name="margin_8dp">8dp</dimen>
+    <dimen name="margin_12dp">12dp</dimen>
+    <dimen name="margin_16dp">16dp</dimen>
+</resources>
