@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <dimen name="view_title_height">54dp</dimen>
+    <dimen name="view_icon_48dp">48dp</dimen>
+
     <dimen name="navigationHeight">64dp</dimen>
 
     <dimen name="item_enter_image_w">96dp</dimen>

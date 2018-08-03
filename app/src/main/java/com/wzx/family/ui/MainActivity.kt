@@ -1,66 +1,61 @@
 package com.wzx.family.ui
 
+import android.content.Intent
 import android.os.Bundle
-import android.support.v7.app.ActionBar
-import android.support.v7.app.AppCompatActivity
-import android.view.LayoutInflater
-import android.view.Menu
+import android.view.MenuInflater
 import android.view.MenuItem
-import android.widget.PopupWindow
-import android.widget.TextView
-import android.widget.Toast
+import android.view.View
+import android.widget.PopupMenu
 import com.wzx.family.R
+import com.wzx.family.base.BaseActivity
+import com.wzx.family.databinding.ActivityMainBinding
 
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : BaseActivity<ActivityMainBinding>(), PopupMenu.OnMenuItemClickListener {
 
 
-    private var actionBar: ActionBar? = null
+    private var addMenu: PopupMenu? = null
 
-    private var popupWindow: PopupWindow? = null
+    override fun getLayoutId(): Int {
+        return R.layout.activity_main
+    }
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-
-        actionBar = supportActionBar
-
-        actionBar!!.title = getString(R.string.app_name)
-
+    override fun init(savedInstanceState: Bundle?) {
+        dataBinding.titleBar?.ivAdd?.setOnClickListener { view ->
+            initAddMenu(view)
+        }
 
     }
 
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.main_menu, menu)
-        return super.onCreateOptionsMenu(menu)
+    override fun initData() {
+
     }
 
-    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+    override fun onMenuItemClick(item: MenuItem?): Boolean {
         when (item!!.itemId) {
-            R.id.action_add -> {
-                Toast.makeText(this@MainActivity, "添加", Toast.LENGTH_SHORT).show()
-                if (popupWindow == null) {
-                    popupWindow = createPopupWindow()
-                }
-                popupWindow?.showAsDropDown(actionBar!!.customView)
-                return true
+            R.id.add_by_album -> {
+
+                return false
             }
-        }
+            R.id.add_by_camera -> {
 
-        return super.onOptionsItemSelected(item)
+                return false
+            }
+            else -> return true
+        }
     }
 
+    private fun initAddMenu(view: View) {
+        if (addMenu == null) {
+            addMenu = PopupMenu(this, view)
 
-    private fun createPopupWindow(): PopupWindow {
-        val contentView = LayoutInflater.from(this@MainActivity).inflate(R.layout.layout_popupwindow, null)
-        contentView.findViewById<TextView>(R.id.action_album).setOnClickListener { view ->
-            Toast.makeText(this@MainActivity, "相册", Toast.LENGTH_SHORT).show()
+            var inflater: MenuInflater = addMenu!!.menuInflater
+
+            inflater.inflate(R.menu.main_menu, addMenu!!.menu)
+
+            addMenu!!.setOnMenuItemClickListener(this)
         }
-        contentView.findViewById<TextView>(R.id.action_phone).setOnClickListener { view ->
-            Toast.makeText(this@MainActivity, "拍照", Toast.LENGTH_SHORT).show()
-        }
-        return PopupWindow(contentView)
+
+        addMenu?.show()
     }
-
-
 }
