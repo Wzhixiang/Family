@@ -34,6 +34,16 @@
             tools:text="标题" />
 
         <ImageView
+            android:id="@+id/iv_search"
+            android:layout_width="@dimen/view_icon_48dp"
+            android:layout_height="match_parent"
+            android:padding="@dimen/margin_12dp"
+            android:src="@drawable/ic_search_white_24dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/iv_add"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
             android:id="@+id/iv_add"
             android:layout_width="@dimen/view_icon_48dp"
             android:layout_height="match_parent"

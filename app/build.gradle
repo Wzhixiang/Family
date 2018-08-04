@@ -19,6 +19,11 @@ android {
         sourceSets.main {
             jniLibs.srcDirs = ['libs']
         }
+
+        buildConfigField "String", "appid", "\"HscvwM5LQ85AGtpSBAqUKRBDDrUUzc2MNqWExU2NaxQQ\""
+        buildConfigField "String", "ft_key", "\"3y2hfvuFzDBFnBoorpG8Tod2RAcs2v1jYKBiX39i1N6s\""
+        buildConfigField "String", "fd_key", "\"3y2hfvuFzDBFnBoorpG8Tod9aZt4FZLZLn9AUjhi4qws\""
+        buildConfigField "String", "fr_key", "\"3y2hfvuFzDBFnBoorpG8TodGjy9CCj3Dm47nnAgVANXD\""
     }
     buildTypes {
         release {

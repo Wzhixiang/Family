@@ -4,6 +4,8 @@
     <dimen name="view_title_height">54dp</dimen>
     <dimen name="view_icon_48dp">48dp</dimen>
 
+    <dimen name="view_width_80dp">80dp</dimen>
+
     <dimen name="navigationHeight">64dp</dimen>
 
     <dimen name="item_enter_image_w">96dp</dimen>
